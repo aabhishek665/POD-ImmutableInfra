@@ -1,0 +1,16 @@
+---
+- name: Install and enable Nginx on Amazon Linux 2 AMI
+  hosts: all
+  become: true
+
+  tasks:
+  - name: Install Nginx package
+    yum:
+      name: nginx
+      state: present
+
+  - name: Enable and start Nginx service
+    systemd:
+      name: nginx
+      enabled: yes
+      state: started
