@@ -13,6 +13,7 @@ source "amazon-ebs" "example" {
   ssh_username    = "ec2-user"
   ami_name        = "packer nginx 2"
   instance_type   = "t2.micro"
+  security_group_id = "sg-0a71c2167ef950f38"
   skip_create_ami = false
 
 }
