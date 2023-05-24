@@ -7,7 +7,7 @@ variable "aws_secret_key" {
 
 source "amazon-ebs" "example" {
   profile         = "pod-test"
-  ssh_timeout     = "200s"
+  ssh_timeout     = "30s"
   region          = "ap-south-1"
   source_ami      = "ami-07d3a50bd29811cd1" // amazon linux 2
   ssh_username    = "ec2-user"
