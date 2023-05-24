@@ -24,5 +24,6 @@ build {
   ]
   provisioner "ansible" {
     playbook_file = "playbook.yaml"
+    use_proxy     = "false"
   }
 }
